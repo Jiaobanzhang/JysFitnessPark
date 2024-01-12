@@ -1,3 +1,5 @@
+/*这个 common.css 包含的是页面的头部和尾部*/
+
 /* 这个是要使用字体图标必须要导入的一段代码，不用清楚是干嘛的，知道这么用就行 */
 /* 这段代码在 icomoon 文件下的 style.css 文件中*/
 @font-face {
@@ -78,18 +80,23 @@
 
 /* 隐藏下拉菜单 */
 .submenu {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease; /* 卷帘门过渡效果 */
+    /*display: none;*/
     position: absolute;
     z-index: 1;
     /* 设置尺寸和样式 */
     width: 220px; /* 设置宽度 */
     background-color: rgba(59, 68, 75, 0.5); /* 设置背景色 */
-    padding: 10px; /* 设置内边距 */
+    padding: 0px; /* 设置内边距 */
+    border-radius: 3px;
 }
 
 /* 显示下拉菜单 */
 .nav li:hover .submenu {
-    display: block;
+    max-height: 300px; /* 设置一个足够大的值，以展开内容 */
+    /*display: block;*/
 }
 
 /*header*/
@@ -109,7 +116,7 @@
 .logo {
     position: absolute;
     top: 20px;
-    /*这是相对于浏览器左边框的相对距离*/
+    /*这是相对于 .w div 左边框的相对距离*/
     left: 261px;
     width: 678px;
     height: 70px;
@@ -167,7 +174,10 @@
 
 /* 隐藏 语言的 下拉菜单 */
 .subLanguage {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease; /* 卷帘门过渡效果 */
+    /*display: none;*/
     position: absolute;
     z-index: 1;
     /* 设置尺寸和样式 */
@@ -178,7 +188,8 @@
 
 /* 显示 语言的 下拉菜单 */
 .language .Fr > li:hover .subLanguage {
-    display: block;
+    max-height: 200px; /* 设置一个足够大的值，以展开内容 */
+    /*display: block;*/
 }
 
 /* Connect 部分 */
@@ -203,4 +214,144 @@
     font-family: "Apple Color Emoji";
 }
 
+/*header 部分 end*/
 
+
+
+/*尾部start*/
+.footer {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    line-height: 200px;
+    background-color: #3B444B;
+}
+
+.footer > div {
+    height: 200px;
+    /*background-coloxxr: aliceblue;*/
+    position: relative;
+}
+
+
+/*div logo2 的设置*/
+/*position: 子绝父相,这样子元素的相对位置就是基于父元素的*/
+.logo2 {
+    /*justify-content: center;*/
+    position: absolute;
+    top: 10px;
+    /*这是相对于 .w div 左边框的相对距离*/
+    left: 510px;
+    width: 200px;
+    height: 150px;
+    /*background: #FFD600;*/
+}
+
+.logo2 a{
+    display: block;
+    width: 195px;
+    height: 150px;
+    background-image: url("../images/logo3.png"); /* 替换 'your-image.jpg' 为实际图片的路径 */
+    background-size: cover; /* 保持宽高比并覆盖整个屏幕 */
+    background-position: center; /* 居中对齐 */
+    background-repeat: no-repeat; /* 不重复 */
+}
+
+.dev {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 350px;
+    height: 180px;
+    /*当时就是缺这么一句话，我弄了半天*/
+    /*这句话的意思就是通过在 .language 中显式设置 line-height: 50px;，你确保了这个容器中的文本行高与容器高度一致。
+    这对于确保文本垂直居中以及更精确地控制布局是很重要的。如果没有设置 line-height，则浏览器将使用默认值，
+    可能导致布局不符合你的预期*/
+    /*这里设置为 45 px，相当于从上到下把这个 div 每 45 px 就分一个*/
+    line-height: 45px;
+    /*background: #FFD600;*/
+    /*让其中的元素垂直居中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*让里面的 h4 元素的字变成白色*/
+    color: #ffffff;
+}
+
+
+.link {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 80px;
+    height: 100px;
+    /*当时就是缺这么一句话，我弄了半天*/
+    /*这句话的意思就是通过在 .language 中显式设置 line-height: 50px;，你确保了这个容器中的文本行高与容器高度一致。
+    这对于确保文本垂直居中以及更精确地控制布局是很重要的。如果没有设置 line-height，则浏览器将使用默认值，
+    可能导致布局不符合你的预期*/
+    line-height: 100px;
+    /*background: #FFD600;*/
+}
+
+.in{
+    margin: 0 5px;
+}
+
+.copyright {
+    /*justify-content: center;*/
+    left: 450px;
+    position: absolute;
+    bottom: 10px;
+    width: 300px;
+    height: 30px;
+    /*当时就是缺这么一句话，我弄了半天*/
+    /*这句话的意思就是通过在 .language 中显式设置 line-height: 50px;，你确保了这个容器中的文本行高与容器高度一致。
+    这对于确保文本垂直居中以及更精确地控制布局是很重要的。如果没有设置 line-height，则浏览器将使用默认值，
+    可能导致布局不符合你的预期*/
+    line-height: 30px;
+    /*background: #550c52;*/
+    /*让其中的元素垂直居中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*让里面的 h4 元素的字变成白色*/
+    color: #ffffff;
+}
+
+/*尾部end*/
+
+/*背景图片1 start, index 和 Contact 都用*/
+.backimage {
+    margin: 0;
+    padding: 0;
+    /*background-color: #FFD600;*/
+    background-image: url('../images/Exercise.jpg'); /* 替换 'your-image.jpg' 为实际图片的路径 */
+    background-size: cover; /* 保持宽高比并覆盖整个屏幕 */
+    background-position: center; /* 居中对齐 */
+    background-repeat: no-repeat; /* 不重复 */
+    /*100vh 表示元素的高度将占据整个视窗的高度。这对于创建全屏背景图片或元素很有用，特别是在移动设备上。*/
+    /*这个很重要，90vh 表示元素的高度将占据整个视窗高度的90%，就是说这个图片占据你电脑屏幕的 90%，对于响应式的请求很有用，因为每个人的电脑屏幕大小都不一样*/
+    height: 90vh; /* 设置页面高度为视口高度 */
+    position: relative;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明蒙板的颜色和透明度，根据需要调整 */
+    /*不用 filter 这个模糊效果，使用 backdrop-filter 可以保证这个模糊不影响其他元素*/
+    /*backdrop-filter: blur(1px); !* 设置模糊效果，可以根据需要调整模糊程度 *!*/
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+}
+/*背景图片1 end*/

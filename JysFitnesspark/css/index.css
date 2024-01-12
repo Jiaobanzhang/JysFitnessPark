@@ -1,0 +1,105 @@
+
+/*!*::before伪元素来创建一个叠加层*!*/
+/*.backimage2::before,*/
+/*.backimage::before {*/
+/*    !*content: ""; 是 CSS 中的一个属性，通常用于在伪元素（pseudo-elements）中创建一个虚拟的文本内容。*!*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: rgba(0, 0, 0, 0.5); !* 设置透明度，可以根据需要调整颜色和透明度 *!*/
+/*    filter: blur(5px); !* 设置模糊效果，可以根据需要调整模糊程度 *!*/
+/*}*/
+
+/*让这个文字距离上边框 175 px 的距离*/
+.overlay h1 {
+    display: block;
+    margin-top: 175px;
+    height: 50px;
+}
+
+.overlay p {
+    margin-top: 150px;
+    height: 50px;
+    font-size: 65px;
+    color: white;
+}
+
+/*focus div 的内容，用来放滑动块的*/
+/*.focus {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 400px;*/
+/*    line-height: 300px;*/
+/*    background: rgba(0, 0, 0, 0.5); !* 设置透明度，可以根据需要调整颜色和透明度 *!*/
+/*    !*background-color: #9c1968;*!*/
+/*    bottom: 0;*/
+/*}*/
+
+/*.focus ul {*/
+/*    display: flex;*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    transition: transform 0.5s ease; !* 添加过渡效果，使滑动更平滑 *!*/
+/*    background: #FFD600;*/
+/*    !*position: relative;*!*/
+/*}*/
+
+/*.focus li {*/
+/*    background: white;*/
+/*    flex: 0 0 100%;*/
+/*    !*align-items: center*!*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.focus li a{*/
+/*    display: block;*/
+/*    !*position: absolute;*!*/
+/*    width: 45%;*/
+/*    background: #666666;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*img {*/
+/*    width: 40%; !* 图片宽度100%填充li容器 *!*/
+/*    height: auto; !* 保持图片宽高比例 *!*/
+/*}*/
+
+/*背景图片1 end*/
+
+
+/*!*文字 text 部分 start*!*/
+/*.text {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    height: 200px;*/
+/*    line-height: 100px;*/
+/*    background-color: #FFD600;*/
+/*}*/
+
+/*文字 text 部分 end*/
+
+
+
+/*背景图片2 start*/
+/*.backimage2 {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    !*background-color: #FFD600;*!*/
+/*    background-image: url('../images/jambe.jpg'); !* 替换 'your-image.jpg' 为实际图片的路径 *!*/
+/*    background-size: cover; !* 保持宽高比并覆盖整个屏幕 *!*/
+/*    background-position: center; !* 居中对齐 *!*/
+/*    background-repeat: no-repeat; !* 不重复 *!*/
+/*    !*100vh 表示元素的高度将占据整个视窗的高度。这对于创建全屏背景图片或元素很有用，特别是在移动设备上。*!*/
+/*    height: 100vh; !* 设置页面高度为视口高度 *!*/
+/*    position: relative;*/
+/*display: flex;*/
+/*align-items: center;*/
+/*justify-content: center;*/
+/*}*/
+
+/*背景图片2 end*/
