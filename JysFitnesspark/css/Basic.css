@@ -16,12 +16,6 @@ a {
     text-decoration: none;
 }
 
-/*!*悬停在 链接 a 上时，颜色变化*!*/
-/*a:hover{*/
-/*    color: #FFD600;*/
-/*    transition: color 0.5s ease; !* 颜色渐变效果 *!*/
-/*}*/
-
 .connect:hover > a,
 li:hover > a,
 li:hover > i {

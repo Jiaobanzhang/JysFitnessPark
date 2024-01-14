@@ -70,13 +70,6 @@
     display: block;
 }
 
-/*悬停在 li 上时候，其中的 a 链接和 i 图标出现颜色渐变的效果，颜色变成黄色 注意 > 表示是直接子元素
-这样的话，悬浮在 nav 的 li 的时候，就只有 你所悬浮的那一个 li 会发生变色*/
-/*.nav li:hover > a,*/
-/*.nav li:hover > i {*/
-/*    color: #FFD600;*/
-/*    transition: color 0.5s ease; !* 颜色渐变效果 *!*/
-/*}*/
 
 /* 隐藏下拉菜单 */
 .submenu {
@@ -324,7 +317,7 @@
 .backimage {
     margin: 0;
     padding: 0;
-    /*background-color: #FFD600;*/
+    /* background-color: #272726; */
     background-image: url('../images/Exercise.jpg'); /* 替换 'your-image.jpg' 为实际图片的路径 */
     background-size: cover; /* 保持宽高比并覆盖整个屏幕 */
     background-position: center; /* 居中对齐 */
